@@ -1,0 +1,26 @@
+mbp-encode: creates a METADATA_BLOCK_PICTURE structure from an image file
+mbp-decode: extracts information and binary data from a METADATA_BLOCK_PICTURE structure
+
+The METADATA_BLOCK_PICTURE structure is defined at:
+
+	https://xiph.org/flac/format.html#metadata_block_picture.
+
+It is used to embed cover pictures inside music files, such as MP3 and OGG Vorbis.
+
+I created these tools because I could not find any command-line tools to
+embed images into OGG Vorbis files and/or extract embedded images from them.
+mbp-encode and mbp-decode can be used in combination with vorbiscomment
+(from vorbis-tools) and other Linux utilities to perform this task.
+
+To embed an image into a Vorbis file use:
+
+	$ printf "METADATA_BLOCK_PICTURE=" > <temp_file>
+	$ mbp-encode <image_file> -t <type> | base64 -w 0 >> <temp_file>
+	$ vorbiscomment <vorbis_file> -a -c <temp_file>
+
+where <type> is usually 3, which means "front cover" (for other values, see "mbp-encode -h").
+
+To extract an embedded image from a Vorbis file, use:
+
+	$ vorbiscomment <vorbis_file> | grep METADATA_BLOCK_PICTURE= | cut -d = -f 2- \
+		| base64 -d | mbp-decode -p -o <image_file>
