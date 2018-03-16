@@ -1,0 +1,18 @@
+Source: mbp-tools
+Maintainer: Livanh <livanh@bulletmail.org>
+Section: sound
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: mbp-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Priority: optional
+Section: sound
+Description: Tools to convert image to/from METADATA_BLOCK_PICTURE structures.
+ The METADATA_BLOCK_PICTURE structure is defined at:
+    https://xiph.org/flac/format.html#metadata_block_picture.
+ It is used to embed cover pictures inside music files, such as MP3 and OGG Vorbis.
+ .
+ mbp-encode and mbp-decode can be used in combination with vorbiscomment (from vorbis-tools) and other Linux utilities to embed images into OGG Vorbis files and/or extract embedded images from them.
