@@ -2,7 +2,7 @@
 	METADATA_BLOCK_PICTURE encoder: creates a METADATA_BLOCK_PICTURE structure from an
 	image file, as defined in https://xiph.org/flac/format.html#metadata_block_picture
 
-	Copyright 2016 Livanh (livanh@bulletmail.org)
+	Copyright 2016 Livanh <livanh@protonmail.com>
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -79,7 +79,7 @@ int main( int argc, char** argv ) {
 	if( help == 1 || argc == 1 ) {
 		fprintf( stderr, "METADATA_BLOCK_PICTURE encoder\n" );
 		fprintf( stderr, "Embeds an image file inside a METADATA_BLOCK_PICTURE structure\n" );
-		fprintf( stderr, "Copyright 2016 Livanh (livanh@bulletmail.org)\n" );
+		fprintf( stderr, "Copyright 2016 Livanh <livanh@protonmail.com>\n" );
 		fprintf( stderr, "This program is released under the GNU GPL v3 (http://www.gnu.org/licenses/)\n" );
 		fprintf( stderr, "\n" );
 		fprintf( stderr, "Usage: %s [<options>] <input file>\n", argv[0] );

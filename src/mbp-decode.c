@@ -2,7 +2,7 @@
 	METADATA_BLOCK_PICTURE decoder: extracts information and binary data from a METADATA_BLOCK_PICTURE
 	structure, as defined in https://xiph.org/flac/format.html#metadata_block_picture
 
-	Copyright 2016 Livanh (livanh@bulletmail.org)
+	Copyright 2016 Livanh <livanh@protonmail.com>
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -113,7 +113,7 @@ int main( int argc, char** argv ) {
 	if( mode == -1 ) {
 		fprintf( stderr, "METADATA_BLOCK_PICTURE decoder\n" );
 		fprintf( stderr, "Extracts information and binary data from a METADATA_BLOCK_PICTURE structure\n" );
-		fprintf( stderr, "Copyright 2016 Livanh (livanh@bulletmail.org)\n" );
+		fprintf( stderr, "Copyright 2016 Livanh <livanh@protonmail.com>\n" );
 		fprintf( stderr, "This program is released under the GNU GPL v3 (http://www.gnu.org/licenses/)\n" );
 		fprintf( stderr, "\n" );
 		if(!help) fprintf( stderr, "Error: no mode specified!\n" );
