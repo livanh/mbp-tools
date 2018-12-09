@@ -1,4 +1,10 @@
-mbp-tools (0.1-1) UNRELEASED; urgency=low
+mbp-tools (0.1-2) testing; urgency=medium
+
+  * Changed email address
+
+ -- Livanh <livanh@protonmail.com>  Sun, 09 Dec 2018 12:26:57 +0100
+
+mbp-tools (0.1-1) testing; urgency=low
 
   * Initial release.
 
