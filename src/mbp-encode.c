@@ -152,15 +152,13 @@ int main( int argc, char** argv ) {
 		} while( 1 );
 		
 		// look for quantization tables
-		if( data_read != 0xffdb ) {
-			fprintf( stderr, "Error: expected quantization table start marker (0xffdb), found %x\n", data_read );
-			abort();
-		}
-		while( data_read == 0xffdb ){
-			data_read = read_16be_int();
-			fprintf( stderr, "Found quantization table (%d bytes). Skipping\n", data_read );
-			fseek( infile, data_read-2, SEEK_CUR );
-			data_read = read_16be_int();
+		if( data_read == 0xffdb ) {
+			while( data_read == 0xffdb ){
+				data_read = read_16be_int();
+				fprintf( stderr, "Found quantization table (%d bytes). Skipping\n", data_read );
+				fseek( infile, data_read-2, SEEK_CUR );
+				data_read = read_16be_int();
+			}
 		}
 
 		// look for start of frame marker

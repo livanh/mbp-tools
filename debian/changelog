@@ -1,3 +1,9 @@
+mbp-tools (0.2-1) testing; urgency=medium
+
+  * Update to upstream version v0.2
+
+ -- Livanh <livanh@protonmail.com>  Sat, 29 Apr 2023 19:31:58 +0200
+
 mbp-tools (0.1-2) testing; urgency=medium
 
   * Changed email address
